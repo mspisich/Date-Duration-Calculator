@@ -1,0 +1,6 @@
+c:\users\mike spisich\documents\visual studio 2015\Projects\DateDurationCalculator\DateDurationCalculator\bin\Debug\DateDurationCalculator.exe.config
+c:\users\mike spisich\documents\visual studio 2015\Projects\DateDurationCalculator\DateDurationCalculator\bin\Debug\DateDurationCalculator.exe
+c:\users\mike spisich\documents\visual studio 2015\Projects\DateDurationCalculator\DateDurationCalculator\bin\Debug\DateDurationCalculator.pdb
+c:\users\mike spisich\documents\visual studio 2015\Projects\DateDurationCalculator\DateDurationCalculator\obj\Debug\DateDurationCalculator.csprojResolveAssemblyReference.cache
+c:\users\mike spisich\documents\visual studio 2015\Projects\DateDurationCalculator\DateDurationCalculator\obj\Debug\DateDurationCalculator.exe
+c:\users\mike spisich\documents\visual studio 2015\Projects\DateDurationCalculator\DateDurationCalculator\obj\Debug\DateDurationCalculator.pdb
