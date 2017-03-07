@@ -75,7 +75,7 @@ namespace DateDurationCalculator
             //Calculate total number of days after years and months are calculated.
             //If number of days in the final month is higher than the first month, add one month to total months and subtract "Day" value of first month
             //from number of days in final month to get final number of days left over.  Otherwise, just add days in first and final months.
-            if (secondDate.Day >= firstDate.Day)
+            if (laterDate.Day >= earlierDate.Day)
             {
                 finalDays = finalMonthDays - Convert.ToInt16(firstDate.Day);
                 months++;
