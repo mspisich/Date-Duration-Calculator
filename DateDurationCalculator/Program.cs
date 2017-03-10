@@ -26,7 +26,7 @@ namespace DateDurationCalculator
             int firstMonthDays = -1, finalMonthDays = 0;
 
 
-            //Find out which date is earlier than the other
+            //Find out which date is earlier than the other, assign to earlierDate and laterDate variables
             DateTime earlierDate;
             DateTime laterDate;
 
@@ -42,16 +42,16 @@ namespace DateDurationCalculator
             }
             
 
-            //Check which date is earlier than the other
+            //Tally up number of days, months, and years between dates
             for (DateTime i = earlierDate; i <= laterDate; i = i.AddDays(1))
             {
-                //Find number of days left of first month, add separately
-                if (i.Month == firstDate.Month && i.Year == firstDate.Year)
+                //Find number of days left of first month, tally separately
+                if (i.Month == earlierDate.Month && i.Year == earlierDate.Year)
                 {
                     firstMonthDays++;
                 }
-                //Find number of days left of final month, add separately
-                else if (i.Month == secondDate.Month && i.Year == secondDate.Year)
+                //Find number of days left of final month, tally separately
+                else if (i.Month == laterDate.Month && i.Year == laterDate.Year)
                 {
                     finalMonthDays++;
                 }
@@ -74,11 +74,20 @@ namespace DateDurationCalculator
 
             //Calculate total number of days after years and months are calculated.
             //If number of days in the final month is higher than the first month, add one month to total months and subtract "Day" value of first month
-            //from number of days in final month to get final number of days left over.  Otherwise, just add days in first and final months.
+            //from number of days in final month to get final number of days left over.  If this brings the number of months to 12, set months to zero and add one year.
+            //Otherwise, just add days in first and final months.
             if (laterDate.Day >= earlierDate.Day)
             {
-                finalDays = finalMonthDays - Convert.ToInt16(firstDate.Day);
+                Console.WriteLine(finalMonthDays);
+                Console.WriteLine(firstMonthDays);
+                finalDays = finalMonthDays - Convert.ToInt16(earlierDate.Day);
+                Console.WriteLine(finalDays);
                 months++;
+                if (months >= 12)
+                {
+                    months = 0;
+                    years++;
+                }
             }
             else
             {
