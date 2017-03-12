@@ -14,9 +14,10 @@ namespace DateDurationCalculator
 
             //Call GetDateDifference method, display final result
             Console.WriteLine("The duration between " + date1.ToString("MM/dd/yyyy") + " and " + date2.ToString("MM/dd/yyyy") + " is " + GetDateDifference(date1, date2) + ".");
+            Console.ReadLine();
         }
         
-
+        
         //Returns duration between two dates
         static public string GetDateDifference(DateTime firstDate, DateTime secondDate)
         {
@@ -168,7 +169,7 @@ namespace DateDurationCalculator
                 {
                     return Convert.ToString(years) + " years, " + Convert.ToString(months) + " months, and " + Convert.ToString(finalDays) + " days";
                 } 
-            } 
-        }
+            }
+        } 
     }
 }
